@@ -1,6 +1,11 @@
 # Toxic Language Filter
-**Contributors:  **
+
+## Contributors:
+- Irsa Ashraf
+- Yifu Hou
+- Ken Kliesner
 
 ## Project Description 
+
 
 ## Data
