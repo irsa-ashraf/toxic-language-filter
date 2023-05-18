@@ -19,13 +19,13 @@ For the purpose of training model, a re-sampled dataset was applied for this pro
 
 ## Models and Performance
 
-#### Baseline Model: BOW
+### Baseline Model: BOW
 
 needs to fill up
 
-#### CNN Model
+### CNN Model
 
-##### V0: 
+#### V0: 
 
 **MODEL**
 
