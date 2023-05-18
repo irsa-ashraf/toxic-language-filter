@@ -1,15 +1,27 @@
-## CNN Language Model for Identifying Toxic Languages from Online Comments
+# CNN Language Model for Identifying Toxic Languages from Online Comments
 
-### About this project
+## About this project
+
+The project aims to build a language model that can accurately classify and categorize toxic comments on social media platforms. The model will be trained on a pre-labeled dataset containing toxic and non-toxic online comments to identify different levels of toxic on media platforms. </p>
+
+In addition, the project aims to identify different categories of toxicity, such as identity-based hate, threats, insults, and others. </p>
+
+The baseline model for this project is a simple Bag-Of-Words (BoW) model, and the main model is a Convolutional Neural Network (CNN). Both models use `GloVe` for word embedding.
+
+## Dataset 
+
+The training dataset for this project is Jigsaw Toxic Comment Classification Challenge dataset on Kaggle ([link](https://www.kaggle.com/competitions/jigsaw-toxic-comment-classification-challenge/data)). </p>
+
+The average length of any individual comment’s raw text is 68, measured in the number of characters of the comment. The proportion of comments in the dataset that have over 60 words is 32%. The proportion of comments that have over 100 words is 18%. And the proportion of comments that have over 200 words is only 6%. </p>
+
+For the purpose of training model, a re-sampled dataset was applied for this project. The dataset contains 28929 records, with half classified as `non-toxic` and the other half classified as `toxic`. The dataset is split into 70: 20: 10 for training, validation and testing.
 
 
-### Dataset 
-
-
-### Models
+## Models and Performance
 
 #### Baseline Model: BOW
 
+needs to fill up
 
 #### CNN Model
 
