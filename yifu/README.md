@@ -1,4 +1,4 @@
-# CNN Language Model for Identifying Toxic Languages from Online Comments
+# CNN Language Model for Toxic Languages Classification
 
 ## About this project
 
