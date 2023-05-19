@@ -72,6 +72,8 @@ For training and validation, we see the following performance:
 |   9    |   0.233904   |  0.239794  |   90.08   |  210.70 |
 |  10    |   0.227885   |  0.236559  |   90.17   |  221.15 |
 
+![alternatvie text](https://github.com/yifu-hou/toxic-language-filter/blob/main/yifu/graphs/best_m0_10epochs_val_acc.png)
+
 For testing, the first CNN model performed well on 2865 testing data: </p>
 
 | Accuracy |	Precision |	Recall	 |  F1       |
@@ -169,6 +171,10 @@ Performance in training:
   18     |   0.189093   |  0.223940  |   90.89   |  208.72  
   19     |   0.188172   |  0.222998  |   91.00   |  203.57  
   20     |   0.184841   |  0.222217  |   91.17   |  351.67 
+
+![alternatvie text](https://github.com/yifu-hou/toxic-language-filter/blob/main/yifu/graphs/best_m0_20epochs_loss.png)
+
+![alternatvie text](https://github.com/yifu-hou/toxic-language-filter/blob/main/yifu/graphs/best_m0_20epochs_val_acc.png)
 
 Performance in testing:
 
