@@ -23,11 +23,7 @@ For the purpose of training model, a re-sampled dataset was applied for this pro
 
 needs to fill up
 
-### CNN Model
-
-#### V0: 
-
-**MODEL**
+### CNN Model V0: 
 
 The first model has 4 different filter sizes: 2, 3, 4 and 5, each focuses on different sizes of N-grams. We assigned 64 filters of each sizes for this model. The fully-connected neural network has 256 input features and binary outputs. The model's dropout rate is set to be 0.5 to avoid over fitting. </p>
 
@@ -82,6 +78,7 @@ For testing, the first CNN model performed well on 2865 testing data: </p>
 |:--------:|:------------:|:--------:|:---------:|
 | 0.914455 |	0.920194  |	0.910714 |	0.91543  |
 
+**FINDINGS IN MODEL PREDICTION** </p>
 
 Checking the False Negative and False Positive predictions, we can see some patterns: </p>
 
@@ -89,52 +86,55 @@ False Negatives *(toxic comments that the model failed to identify)*:
 
 - misspelled rarely-seen slurs
 
-id: `e22a2557c33d5df3` 
-comment: `tno thanks mate p i s s offe` 
+    - id: `e22a2557c33d5df3` 
+    - comment: `tno thanks mate p i s s offe` 
 
-id: `f16ec7cafd4ff73c` 
-comment: `you obviously know shit-nothing about physics, if the buildings were ...` 
+    - id: `f16ec7cafd4ff73c` 
+    - comment: `you obviously know shit-nothing about physics, if the buildings were ...` 
 
 
 - mitigated or weirdly-worded insults 
 
-id: `06a44c69b4c3fb43` 
-comment: `In response to your recent comment on my talk page. I suggest you contract cancer.`
+    - id: `06a44c69b4c3fb43` 
+    - comment: `In response to your recent comment on my talk page. I suggest you contract cancer.`
 
 - ambiguous connotations for language models
 
-id: `e8d66a843390f637` 
-comment: `- Do it and I will cut you`
+    - id: `e8d66a843390f637` 
+    - comment: `- Do it and I will cut you`
 
 
 False Positives *(toxic comments that the model wrongly identified as toxic)*:
 
 - triggering words used in non-toxic context
 
-id: `96b055eca6cc56b0` 
-comment: `a debate to see why he was so virulently anti-Zionist`
+    - id: `96b055eca6cc56b0` 
+    - comment: `a debate to see why he was so virulently anti-Zionist`
+
+    - id: `289b9ebd8ee46b91` 
+    - comment: `This article is useless without pics`
 
 
-id: `289b9ebd8ee46b91` 
-comment: `This article is useless without pics`
+It is worth mentioning that the labeling of original dataset is not perfect - there are a few comments that might be wrongly labelled. </p>
 
+id: `7ba73d7587ca3568` </p>
+comment: </p>
+```
+I have noticed that underneath Sexuality on this page it says 'Gaydolf was a homsexual foggot' i think it would be appropriate to remove this if somebody can.   carf9
+```
+(labeled as `toxic`, our model identified as `not toxic`) </p>
 
-It is worth mentioning that the labeling of original dataset is not perfect - there are a few comments that might be wrongly labelled.
+id: `d4090f8db8939d73` </p>
+comment: </p> 
 
-id: `7ba73d7587ca3568`
-comment: 
-`I have noticed that underneath Sexuality on this page it says 'Gaydolf was a homsexual foggot' i think it would be appropriate to remove this if somebody can.   carf9`
-(labeled as `toxic`, our model identified as `not toxic`)
+```
+Yo who the heeck wrote this and how the heck do they even know what happends.
+```
+(labeled as `toxic`, our model identified as `not toxic`) </p>
 
-id: `d4090f8db8939d73`
-comment: `Yo who the heeck wrote this and how the heck do they even know what happends.`
-(labeled as `toxic`, our model identified as `not toxic`)
-
-id: `583c3800a5b3b464`
-comment: `Do what you want, but you'll never get rid of me, that's a promise. Give your sister a kiss for me.`
-(labeled as `not toxic`, our model identified as `toxic`)
-
-id: `aa956310577db5ac`
-comment: 
-`Men's Right Activists: Fighting Feminazis by acting EXACTLY THE FRICKING SAME =) Wahh wahh I'm oppressed I know u r but what am I wahh wahh... sorry guys but I don't get how you are supposed to prove your superiority to a group by turning yourself into a caricature of it`
-(labeled as `not toxic`, our model identified as `toxic`)
+id: `583c3800a5b3b464` </p>
+comment: </p> 
+```
+Do what you want, but you'll never get rid of me, that's a promise. Give your sister a kiss for me.
+```
+(labeled as `not toxic`, our model identified as `toxic`) </p>
