@@ -19,11 +19,11 @@ For the purpose of training model, a re-sampled dataset was applied for this pro
 
 ## Models and Performance
 
-### Baseline Model: BOW
+### (1) Baseline Model: BOW
 
 needs to fill up
 
-### CNN Model V0: 
+### (2) CNN Model V0: 
 
 The first model has 4 different filter sizes: 2, 3, 4 and 5, each focuses on different sizes of N-grams. We assigned 64 filters of each sizes for this model. The fully-connected neural network has 256 input features and binary outputs. The model's dropout rate is set to be 0.5 to avoid over fitting. </p>
 
@@ -43,7 +43,7 @@ The model was trained on MacBook Pro M2 CPU for 10 epochs, which took around 30 
  )
 ```
 
-**PARAMETERS**
+#### PARAMETERS
 
 |Description         |Values           |
 |:------------------:|:---------------:|
@@ -55,7 +55,7 @@ The model was trained on MacBook Pro M2 CPU for 10 epochs, which took around 30 
 |pooling             |1-max pooling    |
 |dropout rate        |0.5              |
 
-**PERFORMANCE** </p>
+#### PERFORMANCE
 
 For training and validation, we see the following performance: 
 
@@ -78,11 +78,12 @@ For testing, the first CNN model performed well on 2865 testing data: </p>
 |:--------:|:------------:|:--------:|:---------:|
 | 0.914455 |	0.920194  |	0.910714 |	0.91543  |
 
-**FINDINGS IN MODEL PREDICTION** </p>
+#### FINDINGS IN MODEL PREDICTION
 
 Checking the False Negative and False Positive predictions, we can see some patterns: </p>
 
-False Negatives *(toxic comments that the model failed to identify)*:
+**False Negatives** </p> 
+*(toxic comments that the model failed to identify)*: </p> 
 
 - misspelled rarely-seen slurs
 
@@ -91,7 +92,6 @@ False Negatives *(toxic comments that the model failed to identify)*:
 
     - id: `f16ec7cafd4ff73c` 
     - comment: `you obviously know shit-nothing about physics, if the buildings were ...` 
-
 
 - mitigated or weirdly-worded insults 
 
@@ -104,7 +104,8 @@ False Negatives *(toxic comments that the model failed to identify)*:
     - comment: `- Do it and I will cut you`
 
 
-False Positives *(toxic comments that the model wrongly identified as toxic)*:
+**False Positives** </p>  
+*(toxic comments that the model wrongly identified as toxic)*: </p> 
 
 - triggering words used in non-toxic context
 
@@ -114,6 +115,7 @@ False Positives *(toxic comments that the model wrongly identified as toxic)*:
     - id: `289b9ebd8ee46b91` 
     - comment: `This article is useless without pics`
 
+**Debatable Labels**
 
 It is worth mentioning that the labeling of original dataset is not perfect - there are a few comments that might be wrongly labelled. </p>
 
