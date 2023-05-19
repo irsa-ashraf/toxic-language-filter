@@ -140,3 +140,39 @@ comment: </p>
 Do what you want, but you'll never get rid of me, that's a promise. Give your sister a kiss for me.
 ```
 (labeled as `not toxic`, our model identified as `toxic`) </p>
+
+### (2) CNN Model V0 (20 epochs of training): 
+
+The exact same model have been trained for another 10 epochs. We see slight improvement in accuracy, recall and f1. However, the validation accuracy start to reach a plateau after around 15 epochs. </p>
+
+Performance in training:
+
+| Epoch  |  Train Loss  |  Val Loss  |  Val Acc  |  Elapsed 
+|:------:|:------------:|:----------:|:---------:|:-------:|
+   1     |   0.518177   |  0.390717  |   85.49   |  206.55  
+   2     |   0.356052   |  0.314333  |   87.69   |  213.67  
+   3     |   0.305211   |  0.285256  |   88.55   |  216.24  
+   4     |   0.282695   |  0.270456  |   89.24   |  276.86  
+   5     |   0.267897   |  0.261121  |   89.39   |  263.94  
+   6     |   0.258804   |  0.254165  |   89.70   |  269.75  
+   7     |   0.247487   |  0.248454  |   90.01   |  231.39  
+   8     |   0.237717   |  0.243787  |   90.10   |  206.41  
+   9     |   0.233450   |  0.240119  |   90.24   |  205.30  
+  10     |   0.227105   |  0.237166  |   90.38   |  205.57  
+  11     |   0.220388   |  0.234342  |   90.53   |  205.35  
+  12     |   0.215990   |  0.231839  |   90.53   |  205.72  
+  13     |   0.212377   |  0.229920  |   90.63   |  210.60  
+  14     |   0.207373   |  0.228286  |   90.65   |  208.69  
+  15     |   0.204846   |  0.227199  |   90.86   |  209.43  
+  16     |   0.198263   |  0.225998  |   90.84   |  207.99  
+  17     |   0.195395   |  0.224842  |   91.01   |  207.73  
+  18     |   0.189093   |  0.223940  |   90.89   |  208.72  
+  19     |   0.188172   |  0.222998  |   91.00   |  203.57  
+  20     |   0.184841   |  0.222217  |   91.17   |  351.67 
+
+Performance in testing:
+
+| Accuracy |	Precision |	Recall	 |  F1       |
+|:--------:|:------------:|:--------:|:---------:|
+| 0.92074  |	0.918882  |	0.925824 |	0.92234  |
+
