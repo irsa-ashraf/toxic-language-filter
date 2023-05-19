@@ -82,7 +82,7 @@ For testing, the first CNN model performed well on 2865 testing data: </p>
 
 Checking the False Negative and False Positive predictions, we can see some patterns: </p>
 
-**False Negatives** </p> 
+**False Negatives** </p>
 *(toxic comments that the model failed to identify)*: </p> 
 
 - misspelled rarely-seen slurs
@@ -104,7 +104,7 @@ Checking the False Negative and False Positive predictions, we can see some patt
     - comment: `- Do it and I will cut you`
 
 
-**False Positives** </p>  
+**False Positives** </p>
 *(toxic comments that the model wrongly identified as toxic)*: </p> 
 
 - triggering words used in non-toxic context
