@@ -21,15 +21,13 @@ For the purpose of training model, a re-sampled dataset was applied for this pro
 
 ### (1) Baseline Model: BOW
 
-*needs to fill up*
+needs to fill up
 
 ### (2) CNN Model V0: 
 
 The first model has 4 different filter sizes: 2, 3, 4 and 5, each focuses on different sizes of N-grams. We assigned 64 filters of each sizes for this model. The fully-connected neural network has 256 input features and binary outputs. The model's dropout rate is set to be 0.5 to avoid over fitting. </p>
 
 The model was trained on MacBook Pro M2 CPU for 10 epochs, which took around 30 minutes.
-
-This model is used to identify major label (`toxic`) and minor labels (`severe_toxic`, `obscene`, `threat`, `insult`, `identity_hate`)
 
 ```python
 
@@ -59,8 +57,6 @@ This model is used to identify major label (`toxic`) and minor labels (`severe_t
 
 #### PERFORMANCE
 
-##### Identify `toxic` Comments
-
 **With 10 epochs of training:**
 
 For training and validation, we see the following performance: 
@@ -86,61 +82,9 @@ For testing, the first CNN model performed well on 2865 testing data: </p>
 |:--------:|:------------:|:--------:|:---------:|
 | 0.914455 |	0.920194  |	0.910714 |	0.91543  |
 
-##### Identify `severe_toxic` Comments
+#### FINDINGS IN MODEL PREDICTION
 
-Dataset: samples in total after balancing on the target label </p>
-
-Best performed model: `ST_model_best`
-
-| Accuracy |	Precision |	Recall	 |  F1       |
-|:--------:|:------------:|:--------:|:---------:|
-| 0.927632 |	0.943038  |	0.919753 |	0.93125  |
-
-##### Identify `obscene` Comments
-
-Dataset: samples in total after balancing on the target label </p>
-
-Best performed model: `OB_model_best`
-
-| Accuracy |	Precision |	Recall	 |  F1       |
-|:--------:|:------------:|:--------:|:---------:|
-| 0.930889  |	0.939163  |	0.917079 |	0.92799  |
-
-##### Identify `threats` Comments
-
-Dataset: samples in total after balancing on the target label </p>
-
-Best performed model: `TH_model_best`
-
-| Accuracy |	Precision |	Recall	 |  F1       |
-|:--------:|:------------:|:--------:|:---------:|
-| 0.875    |	0.871795  |	0.871795 |	0.871795 |
-
-##### Identify `insults` Comments
-
-Dataset: samples in total after balancing on the target label </p>
-
-Best performed model: `IN_model_best`
-
-| Accuracy |	Precision |	Recall	 |  F1       |
-|:--------:|:------------:|:--------:|:---------:|
-| 0.931701 |	0.932065  |	0.924528 |	0.928281 |
-
-##### Identify `identity_hate` Comments
-
-Dataset: samples in total after balancing on the target label </p>
-
-Best performed model: `IH_model_best`
-
-| Accuracy |	Precision |	Recall	 |  F1       |
-|:--------:|:------------:|:--------:|:---------:|
-| 0.875000  |	0.928571  |	0.804455 |	0.862069 |
-
-![alternatvie text](https://github.com/yifu-hou/toxic-language-filter/blob/main/yifu/graphs/cnn_minor_labels.png)
-
-#### FINDINGS
-
-We focus on improving the prediction accuracy on major label `toxic`. After checking the False Negative and False Positive predictions, we can see some patterns: </p>
+Checking the False Negative and False Positive predictions, we can see some patterns: </p>
 
 **False Negatives** </p>
 *(toxic comments that the model failed to identify)*: </p> 
@@ -162,6 +106,7 @@ We focus on improving the prediction accuracy on major label `toxic`. After chec
 
     - id: `e8d66a843390f637` 
     - comment: `- Do it and I will cut you`
+
 
 **False Positives** </p>
 *(toxic comments that the model wrongly identified as toxic)*: </p> 
@@ -200,9 +145,7 @@ Do what you want, but you'll never get rid of me, that's a promise. Give your si
 ```
 (labeled as `not toxic`, our model identified as `toxic`) </p>
 
-**With 20 epochs of training:** </p>
-
-To improve the model, we increased the number of epochs to 20, and select the best-performed model from this training process (before the model shows overfitting). </p>
+**With 20 epochs of training:**
 
 The exact same model have been trained for another 10 epochs. We see slight improvement in accuracy, recall and f1. However, the validation accuracy start to reach a plateau after around 15 epochs. </p>
 
@@ -239,12 +182,10 @@ Performance in testing:
 
 | Accuracy |	Precision |	Recall	 |  F1       |
 |:--------:|:------------:|:--------:|:---------:|
-| 0.92074  |	0.918882  |	0.925824 |	0.92234  |
+| 0.92074  |	0.918882  |	0.925824 |	0.92234 |
 
 
 ### (3) CNN Model V1: 
-
-To further improve model accuracy on major label `toxic`, we implemented CNN Model V1, and increased the number of filters for each size `(2, 3, 4, 5)` from `64` to `128`:
 
 #### PARAMETERS
 
@@ -266,10 +207,12 @@ To further improve model accuracy on major label `toxic`, we implemented CNN Mod
 |:--------:|:------------:|:--------:|:---------:|
 | 0.915852 |	0.917526  |	0.916896 |	0.917211 |
 
+**With 20 epochs of training:**
 
-### (4) CNN Model V1 (low DropOut rate): 
+No data
 
-Since Model V1 did not show a clear sign of overfitting, we decreased Dropout rate from `0.5` to `0.2`, with the hope that it captures more features from the training data. We see a slight increase in the performance metrics.
+
+### (3) CNN Model V1 (low DropOut rate): 
 
 #### PARAMETERS
 
@@ -290,4 +233,3 @@ Since Model V1 did not show a clear sign of overfitting, we decreased Dropout ra
 | Accuracy |	Precision |	Recall	 |  F1       |
 |:--------:|:------------:|:--------:|:---------:|
 | 0.92074  |	0.918882  |	0.925824 |	0.92234  |
-
