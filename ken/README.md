@@ -3,6 +3,11 @@
 Implemented using HuggingFace Transformer Pre-Trained Model (Based on BERT, PyTorch, and TensorFlow):
     https://huggingface.co/docs/transformers/tasks/sequence_classification
 
+## Primary Files:
+- transformer_bi_label.ipynb : contains all of the main functioning code for the model
+- data/ : has all of the relevant data
+- everything else : has test files and other experimented with files
+
 ### Overview:
 Text classification is a common NLP task that assigns a label or class to text. Some of the largest companies run text classification in production for a wide range of practical applications. One of the most popular forms of text classification is sentiment analysis, which assigns a label like 🙂 positive, 🙁 negative, or 😐 neutral to a sequence of text.
 
