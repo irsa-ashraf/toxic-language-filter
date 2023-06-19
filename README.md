@@ -6,6 +6,11 @@ Our goal is to build a classifier that can accurately classify and categorize to
 
 At the most fundamental level, the project aims to develop an NLP model that can accurately perform binary classification between toxic and non-toxic comments. In addition, the project aims to identify different categories of toxicity, such as identity-based hate, threats, insults, and others. Ultimately, the project sets the goal to develop a generalized, scalable language model as a solution to classifying different types of toxic comments across different platforms. This required training on different datasets, fine-tuning the model for high accuracy, and performance optimization–some of it was out of the scope of the course and so we adjusted the implementation according to time and resources available to us.
 
+## Poster Presentation 
+
+[Final Poster.pdf](https://github.com/irsa-ashraf/toxic-language-filter/files/11793879/Final.Poster.pdf)
+
+
 
 ### Data Source
 Jigsaw Toxic Comment Classification Dataset from kaggle 
