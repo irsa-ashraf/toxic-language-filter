@@ -1,5 +1,5 @@
 # Toxic Language Filter
-Final Project for the class CAPP30255: Advanced Machine Learning for Public Policy, taught by Professor Amitabh Chaudhry at the University of Chicago.
+Final Project for the class CAPP30255: Advanced Machine Learning for Public Policy, taught by Professor Amitabh Chaudhary at the University of Chicago.
 
 ## Project Overview
 Our goal is to build a classifier that can accurately classify and categorize toxic comments on social media platforms. The model will be trained on a pre-labeled dataset containing toxic and non-toxic online comments to identify different levels of toxicity on media platforms.
