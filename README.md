@@ -8,7 +8,7 @@ At the most fundamental level, the project aims to develop an NLP model that can
 
 ## Poster Presentation 
 
-[Final Poster.pdf](https://github.com/irsa-ashraf/toxic-language-filter/files/11793879/Final.Poster.pdf)
+![](../Final Poster.png)
 
 
 
