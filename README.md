@@ -8,9 +8,7 @@ At the most fundamental level, the project aims to develop an NLP model that can
 
 ## Poster Presentation 
 
-![](../Final Poster.png)
-
-
+![](Final Poster.png)
 
 ### Data Source
 Jigsaw Toxic Comment Classification Dataset from kaggle 
